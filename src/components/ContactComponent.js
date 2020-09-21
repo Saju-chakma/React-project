@@ -116,7 +116,7 @@ class Contact extends Component {
                             </div>
                         </div>
                     </div>
-                    . . .
+
 
                     <div className="row row-content">
                         <div className="col-12">
@@ -124,7 +124,7 @@ class Contact extends Component {
                         </div>
                         <div className="col-12 col-md-9">
                             <Form onSubmit={this.handleSubmit}>
-                                . . .
+
 
                                 <FormGroup row>
                                     <Label htmlFor="firstname" md={2}>First Name</Label>
@@ -179,7 +179,7 @@ class Contact extends Component {
                                     </Col>
                                 </FormGroup>
 
-                                . . .
+
                                 <FormGroup row>
                                     <Label htmlFor="message" md={2}>Your Feedback</Label>
                                     <Col md={10}>
@@ -200,7 +200,7 @@ class Contact extends Component {
                         </div>
                     </div>
 
-                    . . .
+
                 </div>
             );
         }
