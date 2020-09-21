@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Navbar, NavbarBrand } from 'reactstrap';
-import Menu from './mycomponent';
+import Menu from './MenuComponent';
 import DishDetail from './DishDetails';
 import { DISHES } from '../shared/dishes';
 import { COMMENTS } from '../shared/comments';
@@ -12,6 +12,7 @@ import {Redirect, Route, Switch} from "react-router-dom";
 import Home from "./HomeComponent";
 import Contact from './ContactComponent';
 import App from "../App.css"
+import About from "./AboutComponent";
 
 class Main extends Component {
 
@@ -42,6 +43,11 @@ class Main extends Component {
                             comments={this.state.comments.filter((comment) => comment.dishId === parseInt(match.params.dishId,10))} />
             );
         };
+        const AboutUs = ()=>{
+            return(
+                <About leaders={this.state.leaders}/>
+            );
+        }
 
 
 
@@ -51,6 +57,7 @@ class Main extends Component {
                 <Switch>
                     <Route path='/home' component={HomePage} />
                     <Route exact path='/menu' component={() => <Menu dishes={this.state.dishes} />} />
+                    <Route exact path="/aboutus" component={AboutUs}/>
                     <Route exact path='/contactus' component={Contact} />} />
                     <Route path='/menu/:dishId' component={DishWithId} />
                     <Redirect to="/home" />
