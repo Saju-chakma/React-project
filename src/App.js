@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import Main from "./components/MainComponent";
 import BrowserRouter from "react-router-dom/BrowserRouter";
 import { Provider } from 'react-redux';
-import { ConfigureStore } from './redux/configureStore';
+import { ConfigureStores } from './redux/configureStores';
 
-const store = ConfigureStore();
+const store = ConfigureStores();
 class App extends Component{
     render(){
         return (
